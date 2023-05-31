@@ -33,6 +33,19 @@ public class StringManipulator {
 
         return a;
     }
+    
+    
+    public int countVowel(String str)
+    {
+		int vowel=0;
+		
+		for (int i = 0; i < str.length(); i++) { 
+            if(str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i' || str.charAt(i)=='o' || str.charAt(i)=='u') 
+                vowel++; 
+		}
+  
+	return vowel;
+    }
 
     public static void main(String[] args) {
 
@@ -45,6 +58,9 @@ public class StringManipulator {
         int arr[] = { 10, 11, 9, 12, 10, 6, 9, 12, 11 };
         ArrayList<Integer> a=manipulator.findDuplicates(arr);
         System.out.println(a);
+        String str=sc.nextLine();
+        int vowel=manipulator.countVowel(str);
+        System.out.println("Number of vowel is:" +vowel);
         sc.close();
     }
 }
